@@ -4,24 +4,24 @@ import assert from 'assert/strict';
 import * as func from '../index.js'
 
 test('step1', () => {
-    const result = dnaToRna('ACGTGGTCTTAA');
+    const result = func.dnaToRna('ACGTGGTCTTAA');
     const expected = 'UGCACCAGAAUU';
     assert.strictEqual(result, expected);
 });
 
 test('step2', () => {
-    const result = dnaToRna('CCGTA');
+    const result = func.dnaToRna('CCGTA');
     const expected = 'GGCAU';
     assert.strictEqual(result, expected);
 });
 
 test('step3', () => {
-    const result = dnaToRna('');
+    const result = func.dnaToRna('');
     const expected = '';
     assert.strictEqual(result, expected);
 });
 
 test('step4', () => {
-    const result = dnaToRna('ACNTG');
+    const result = func.dnaToRna('ACNTG');
     assert.strictEqual(result, null);
 });
